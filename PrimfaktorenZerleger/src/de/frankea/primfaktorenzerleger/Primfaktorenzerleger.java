@@ -12,7 +12,7 @@ public class Primfaktorenzerleger {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Bitte geben Sie die Zahl ein, die Sie in Primfaktoren zerlegen wollen.");
+		System.out.println("Bitte geben Sie die Zahl ein, die Sie in Primfaktoren zerlegen wollen!");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		Integer ausgangsWert = 0;
 		try {
