@@ -44,6 +44,16 @@ public class PrimfaktorenZerlegerTest {
 	}
 	
 	@Test
+	public void testFaktorDoppelt() {
+		sollErgebnis.add(1);
+		sollErgebnis.add(3);
+		sollErgebnis.add(3);
+		sollErgebnis.add(5);
+		istErgebnis = Primfaktorenzerleger.zerlegeInFaktoren(45);
+		Assert.assertEquals(sollErgebnis, istErgebnis);
+	}
+	
+	@Test
 	public void testZweihundertEinunddreissig() {
 		sollErgebnis.add(1);
 		sollErgebnis.add(3);

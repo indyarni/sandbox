@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Primfaktorenzerleger {
 
 	/**
@@ -31,14 +32,19 @@ public class Primfaktorenzerleger {
 	 * @return Eine Liste der Primfaktoren.
 	 */
 	public static List<Integer> zerlegeInFaktoren(Integer ausgangsWert) {
-		List<Integer> ergebnis = new ArrayList<Integer>();				
-		int aktuellePrimzahl = 1;
+		Integer restWert = ausgangsWert;
+		List<Integer> ergebnis = new ArrayList<Integer>();
+		ergebnis.add(new Integer(1));
+		int aktuellePrimzahl = 2;
 		
-		while(aktuellePrimzahl <= ausgangsWert) {
-			if(ausgangsWert%aktuellePrimzahl==0) {
-				ergebnis.add(aktuellePrimzahl);
+		while(aktuellePrimzahl <= restWert) {
+			if(restWert%aktuellePrimzahl==0) {
+				ergebnis.add(new Integer(aktuellePrimzahl));
+				restWert = restWert/aktuellePrimzahl;
 			}
-			aktuellePrimzahl = ermittleNaechstePrimzahl(aktuellePrimzahl);			
+			else {
+				aktuellePrimzahl = ermittleNaechstePrimzahl(aktuellePrimzahl);
+			}
 		}
 		
 		return ergebnis;
