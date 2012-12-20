@@ -26,7 +26,7 @@ public class Primfaktorenzerleger {
 		}
 
 	}
-
+	
 	/**
 	 * @param ausgangsWert Der Wert, der in Primfaktoren zerlegt werden soll.
 	 * @return Eine Liste der Primfaktoren.
@@ -71,7 +71,7 @@ public class Primfaktorenzerleger {
 			}
 			zaehler++;
 		}
-		return istPrimzahl;
+		return istPrimzahl;	
 	}
 
 }
